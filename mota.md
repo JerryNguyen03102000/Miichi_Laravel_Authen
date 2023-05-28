@@ -1,0 +1,8 @@
+- có vài cho em làm 
+- form đăng ký admin vì đề bài không rõ yêu cầu nên em thêm 1 trường là cho phép tạo admin toàn quyền thao tác với user
+- với role là supper admin sẽ là admin toàn quyền thao tác
+- với role là normal admin chỉ có quyền xem ,xem chi tiết user
+- trong table admin với role = 1 sẽ là supper admin và role = 0 là admin bình thường
+- em có tạo thêm chức năng crud ^^
+- đăng ký tài khoản user hoặc admin sẽ gửi mail đến email đăng ký
+- check middleware nếu chưa đăng nhập thì không vào trang dashboard
