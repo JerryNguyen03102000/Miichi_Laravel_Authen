@@ -29,9 +29,9 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::prefix('dashboard')->middleware('multiAuth')->group(function () {
     Route::get('/', [MainController::class, 'index'])->name('index');
     Route::get('/user/detail/{id}', [MainController::class, 'detail'])->name('user.detail');
-    Route::get('/user/create', [MainController::class, 'create'])->name('user.create');
+    Route::get('/user/create', [MainController::class, 'create'])->name('user.create')->middleware('can:isSuperAdmin');
     Route::post('/user/create', [MainController::class, 'store'])->name('user.create.store');
-    Route::get('/user/edit/{id}', [MainController::class, 'edit'])->name('user.edit');
+    Route::get('/user/edit/{id}', [MainController::class, 'edit'])->name('user.edit')->middleware('can:isSuperAdmin');
     Route::post('/user/edit/{id}', [MainController::class, 'update'])->name('user.update');
-    Route::get('/user/delete/{id}', [MainController::class, 'delete'])->name('user.delete');
+    Route::get('/user/delete/{id}', [MainController::class, 'delete'])->name('user.delete')->middleware('can:isSuperAdmin');
 });

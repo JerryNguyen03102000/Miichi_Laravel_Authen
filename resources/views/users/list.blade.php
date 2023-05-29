@@ -33,7 +33,7 @@
                                         </td>
                                     @else
                                         <td>
-                                            <a href=""><i class="fa-solid fa-eye text-success"></i></a>
+                                            <a href="{{route('user.detail', ['id' => $value->id])}}"><i class="fa-solid fa-eye text-success"></i></a>
                                         </td>
                                     @endif
                                 </tr>

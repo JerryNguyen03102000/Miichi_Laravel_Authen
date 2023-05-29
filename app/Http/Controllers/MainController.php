@@ -76,7 +76,7 @@ class MainController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:App\Models\User,email,' . $id,
+            'email' => 'required|email|unique:App\Models\User,email,'.$id,
             'password' => 'required|min:8',
         ]);
         $user = User::find($id);

@@ -10,8 +10,10 @@
             <div class="collapse" id="user">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"><a class="nav-link" href="{{route('index')}}">List Users </a>
+                    @if (Auth::guard('admin')->check() && Auth::guard('admin')->user()->role == 1)
                     <li class="nav-item"><a class="nav-link" href="{{route('user.create')}}">Create User </a>
                     </li>
+                    @endif
                 </ul>
             </div>
         </li>

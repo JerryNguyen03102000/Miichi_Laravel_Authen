@@ -42,7 +42,7 @@ class AuthController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:App\Models\Admin,email',
+            'email' => 'required|email|unique:admins,email',
             'password' => 'required|min:8',
         ]);
         $admin = new Admin();
