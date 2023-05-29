@@ -28,7 +28,7 @@ class AuthController extends Controller
         }
 
         if (Auth::guard('web')->attempt($credentials)) {
-            return redirect()->route('index');
+            return '<h1>Welcome to</h1>' . $request->input('email');
         }
         Session::flash('fail','Incorrect email or password');
         return redirect()->back();

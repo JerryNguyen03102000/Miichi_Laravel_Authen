@@ -6,3 +6,5 @@
 - em có tạo thêm chức năng crud ^^
 - đăng ký tài khoản user hoặc admin sẽ gửi mail đến email đăng ký
 - check middleware nếu chưa đăng nhập thì không vào trang dashboard
+- nếu user đăng nhập thành công sẽ gửi thông báo thành công 
+- -nếu admin đăng nhập thanh công sẽ hiển thị trang quản trị admin
